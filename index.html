@@ -18,6 +18,7 @@
 
 <body>
   <nav class="navbar navbar-expand-sm navbar-light bg-white">
+    
     <div class="container">
       <a class="navbar-brand" href="index.html">Juventus</a>
       <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
@@ -168,33 +169,13 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    const carousel = document.getElementById('carouselId');
-    const nadpis = document.querySelector('.navbar');
-  
-    function nahodnaBarva() {
-      const barvy = ['rgb(255, 255, 0)', 'rgb(0, 0, 0)', 'rgb(255, 255, 255)'];
-      let index = 0;
-  
-      return function () {
-        const barva = barvy[index];
-        index = (index + 1) % barvy.length;
-        return barva;
-      }
-    }
-  
-    const generujNahodnouBarvu = nahodnaBarva();
-  
-    // carousel.style.display = 'none';
-    carousel.addEventListener('slide.bs.carousel', function () {
-      console.log(generujNahodnouBarvu());
-      nadpis.style.setProperty('background-color', generujNahodnouBarvu(), 'important');
-    })
-  
-    setInterval(function () {
-      nadpis.style.setProperty('background-color', generujNahodnouBarvu(), 'important');
-    }, 500);
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+<!-- (Optional) - Place this js code after initializing bootstrap.bundle.min.js -->
+<script>
+  var triggerEl = document.querySelector('#navigace a')
+  bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+</script>
   
 
   
